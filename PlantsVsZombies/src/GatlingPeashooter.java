@@ -1,9 +1,8 @@
 import java.awt.event.ActionEvent;
 import javax.swing.*;
 
-public class GatlingPeashooter extends Plant {
-    public Timer shootTimer;
-    
+public class GatlingPeashooter extends Shooter {
+	
     public GatlingPeashooter(GamePanel parent,int x,int y) {
         super(parent,x,y);
         shootTimer = new Timer(2000,(ActionEvent e) -> {
@@ -14,14 +13,6 @@ public class GatlingPeashooter extends Plant {
                 gp.lanePeas.get(y).add(new GatlingPea(gp, y, 149 + this.x * 100));
             }
         });      
-        
-
         shootTimer.start();
     }
-
-    @Override
-    public void stop(){
-        shootTimer.stop();
-    }
-
 }

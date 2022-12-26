@@ -1,9 +1,8 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 
-public class Sunflower extends Plant {
-    Timer sunProduceTimer;
-
+public class Sunflower extends EnergyProduct {
+    
     public Sunflower(GamePanel parent,int x,int y) {
         super(parent, x, y);
         sunProduceTimer = new Timer(15000,(ActionEvent e) -> {
@@ -11,7 +10,9 @@ public class Sunflower extends Plant {
             gp.activeSuns.add(sta);
             gp.add(sta,new Integer(1));
         });
-        sunProduceTimer.start();
+        sunProduceTimer.start();    
     }
-
+    public void stop(){
+    	sunProduceTimer.stop();
+    }
 }

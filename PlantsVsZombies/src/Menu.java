@@ -7,12 +7,10 @@ public class Menu extends JPanel {
     /**
      * Creates new form Menu
      */
-    Image bgImage;
+	ImageContainer IC = new ImageContainer();
     public Menu() {
         initComponents();
-        setSize(1100, 650);
-        bgImage  = new ImageIcon(this.getClass().getResource("images/menu.png")).getImage();
-        
+        setSize(1100, 650);       
     }
 
     /**
@@ -23,7 +21,7 @@ public class Menu extends JPanel {
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-        g.drawImage(bgImage,0,0,null);
+        g.drawImage(IC.getMenuImage(),0,0,null);
         
     }
     @SuppressWarnings("unchecked")

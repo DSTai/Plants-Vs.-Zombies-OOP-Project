@@ -3,7 +3,7 @@ import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
-public class Sun extends JPanel implements MouseListener {
+public class Sun extends JPanel implements MouseListener,GameObject {
 
     GamePanel gp;
     Image sunImage;
@@ -12,7 +12,7 @@ public class Sun extends JPanel implements MouseListener {
     int myY;
     int endY;
 
-    int destruct = 200;
+    int destruct = 200; //destruct time
 
     public Sun(GamePanel parent,int startX,int startY,int endY){
         this.gp = parent;
@@ -32,11 +32,11 @@ public class Sun extends JPanel implements MouseListener {
         g.drawImage(sunImage,0,0,null);
     }
 
-    public void advance(){
+    public void product(){
         if(myY < endY) {
-            myY+= 4;
+            myY+= 4; //how fast sun fall
         }else{
-            destruct--;
+            destruct--; // time that sun present if you do not take it for long time it will destruct
             if(destruct<0){
                 gp.remove(this);
                 gp.activeSuns.remove(this);

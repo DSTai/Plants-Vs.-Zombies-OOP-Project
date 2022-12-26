@@ -1,9 +1,7 @@
 import java.awt.event.ActionEvent;
 import javax.swing.*;
 
-public class FreezePeashooter extends Plant {
-
-    public Timer shootTimer;
+public class FreezePeashooter extends Shooter {
 
 
     public FreezePeashooter(GamePanel parent,int x,int y) {
@@ -16,10 +14,4 @@ public class FreezePeashooter extends Plant {
         });
         shootTimer.start();
     }
-
-    @Override
-    public void stop(){
-        shootTimer.stop();
-    }
-
 }

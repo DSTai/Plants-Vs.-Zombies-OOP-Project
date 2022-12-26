@@ -3,6 +3,8 @@ public class ConeHeadZombie extends Zombie {
 
     public ConeHeadZombie(GamePanel parent,int lane){
         super(parent,lane);
-        health = 1800;
+        setAttack(20);
+        setHealth(2000);
+        setSpeed(1);
     }
 }

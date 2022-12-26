@@ -1,17 +1,13 @@
 
-public abstract class Plant {
-	public int health = 200;
-    public int x;
-    public int y;
-
+public class Plant extends Character {
+	
     public GamePanel gp;
-
+    
     public Plant(GamePanel parent,int x,int y){
         this.x = x;
         this.y = y;
-        gp = parent;
+        gp = parent;     
     }
-
-    public void stop(){}
-
+    public void remove(){   	
+    }
 }
