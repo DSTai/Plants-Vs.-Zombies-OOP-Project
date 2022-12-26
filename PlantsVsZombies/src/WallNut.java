@@ -1,9 +1,8 @@
 
-public class WallNut extends Plant {
+public class WallNut extends Defender {
 
 	public WallNut(GamePanel parent, int x, int y) {
 		super(parent, x, y);
-		setHealth(1800);
+		ExtraHealth(1800);
 	}
-
 }

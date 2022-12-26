@@ -8,5 +8,6 @@ public class Shooter extends Plant {
 	}
 	public void stop(){
         shootTimer.stop();
+        System.out.println("shooting stop");
     }
 }

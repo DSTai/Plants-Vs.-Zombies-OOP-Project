@@ -9,25 +9,26 @@ import java.awt.event.MouseListener;
 public class Collider extends JPanel implements MouseListener {
 
     ActionListener al;
-    
+    public Plant assignedPlant;
 
     public Collider(){
         setBorder(new LineBorder(Color.RED));
         setOpaque(false);
         addMouseListener(this);
-        //setBackground(Color.green);
         setSize(95,100);
     }
-
-    public Plant assignedPlant;
 
     public void setPlant(Plant p){
         assignedPlant = p;
     }
 
     public void removePlant(){
-        assignedPlant.remove();
-        assignedPlant = null;
+    	
+        assignedPlant.remove();  
+        assignedPlant.stop();
+        assignedPlant = null;      
+        
+        
     }
 
     public boolean isInsideCollider(int tx){

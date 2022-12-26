@@ -21,7 +21,8 @@ public class ImageContainer {
     private Image card_wallnut;
     private Image card_gatlingpeashooter;
 
-
+    private Image card_shovel;
+    private Image sunImage;
     private Image loadImage(String filePath) {
         return new ImageIcon(this.getClass().getResource(filePath)).getImage();
     } 
@@ -35,6 +36,8 @@ public class ImageContainer {
     	
     	menuImage =(loadImage("images/menu.png"));
         bgImage = loadImage("images/mainBG2.png");
+        sunImage = loadImage("images/sun.png");
+        card_shovel = loadImage("images/cards/card_shovel.png");
         
         wallNutImage = loadImage("images/plants/wallnut.gif");
         peashooterImage = loadImage("images/plants/peashooter.gif");
@@ -48,7 +51,15 @@ public class ImageContainer {
         coneHeadZombieImage = loadImage("images/zombies/zombie2move.gif");
     }
 
-    public Image getCard_peashooter() {
+    public Image getSunImage() {
+		return sunImage;
+	}
+
+	public void setSunImage(Image sunImage) {
+		this.sunImage = sunImage;
+	}
+
+	public Image getCard_peashooter() {
 		return card_peashooter;
 	}
 
@@ -174,5 +185,13 @@ public class ImageContainer {
 
 	public void setCard_sunflower(Image card_sunflower) {
 		this.card_sunflower = card_sunflower;
+	}
+
+	public Image getCard_shovel() {
+		return card_shovel;
+	}
+
+	public void setCard_shovel(Image card_shovel) {
+		this.card_shovel = card_shovel;
 	} 
 }

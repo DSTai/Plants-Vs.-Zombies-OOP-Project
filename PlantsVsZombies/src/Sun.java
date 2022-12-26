@@ -6,13 +6,11 @@ import java.awt.event.MouseListener;
 public class Sun extends JPanel implements MouseListener,GameObject {
 
     GamePanel gp;
-    Image sunImage;
+    private int myX;
+    private int myY;
+    private int endY;
 
-    int myX;
-    int myY;
-    int endY;
-
-    int destruct = 200; //destruct time
+    private int destruct = 200; //destruct time
 
     public Sun(GamePanel parent,int startX,int startY,int endY){
         this.gp = parent;
@@ -22,14 +20,13 @@ public class Sun extends JPanel implements MouseListener,GameObject {
         myX = startX;
         myY = startY;
         setLocation(myX,myY);
-        sunImage = new ImageIcon(this.getClass().getResource("images/sun.png")).getImage();
         addMouseListener(this);
     }
 
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        g.drawImage(sunImage,0,0,null);
+        g.drawImage(gp.IC.getSunImage(),0,0,null);
     }
 
     public void product(){
@@ -57,7 +54,7 @@ public class Sun extends JPanel implements MouseListener,GameObject {
 
     @Override
     public void mouseReleased(MouseEvent e) {
-        gp.setSunScore(gp.getSunScore()+25);
+        gp.SS.setSunScore(gp.SS.getSunScore()+25);
         gp.remove(this);
         gp.activeSuns.remove(this);
     }

@@ -10,4 +10,6 @@ public class Plant extends Character {
     }
     public void remove(){   	
     }
+	public void stop() {	
+	}
 }

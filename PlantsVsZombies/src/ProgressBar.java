@@ -2,7 +2,7 @@ import java.awt.Color;
 
 import javax.swing.JProgressBar;
 
-public class ProgressBar extends JProgressBar {
+public class ProgressBar extends JProgressBar implements GameObject{
 
     public ProgressBar() {
         setStringPainted(true);

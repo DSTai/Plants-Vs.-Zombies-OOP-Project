@@ -1,34 +1,21 @@
 import javax.swing.*;
-import java.awt.event.ActionEvent;
 
 public class Zombie extends Character{
 
     public int speed;
     public int attack;
-    private GamePanel gp;
+    public GamePanel gp;
     public int posX = 1100;
     public int myLane;
     public boolean isMoving = true;
-    int slowInt = 0;
-    public int getSpeed() {
-		return speed;
-	}
-	public void setSpeed(int speed) {
-		this.speed = speed;
-	}
-    public int getAttack() {
-		return attack;
-	}
-	public void setAttack(int attack) {
-		this.attack = attack;
-	}
+    public int slowInt = 0;
 
     public Zombie(GamePanel parent,int lane){
         this.gp = parent;
         myLane = lane; // This is line that create zombie from 1 to 5
     }
 
-    public void advance(){
+    public void eating(){
         if(isMoving) {
             boolean isCollides = false;
             Collider collided = null;
@@ -58,7 +45,7 @@ public class Zombie extends Character{
             }
             if (posX <= 0) { // Zombie gone through the house; player lose
                 isMoving = false;
-                JOptionPane.showMessageDialog(gp,"ZOMBIES GOT INTO THE HOUSE AND ATE YOUR BRAIN !" + '\n' + "Starting the level again");
+                JOptionPane.showMessageDialog(gp,"THE ZOMBIES ATE YOUR BRAIN !" + '\n' + "Starting the level again");
                 GameWindow.gw.dispose();
                 GameWindow.gw = new GameWindow();
                 
@@ -66,13 +53,10 @@ public class Zombie extends Character{
             }
         }
     }
-
-    
+  
     public void slow(){
         slowInt = 1000;
-    }
-    
-    
+    }   
     public static Zombie getZombie(String type,GamePanel parent, int lane) {
         Zombie z = new Zombie(parent,lane);
        switch(type) {
@@ -80,8 +64,21 @@ public class Zombie extends Character{
                                  break;
            case "ConeHeadZombie" : z = new ConeHeadZombie(parent,lane);
                                  break;
-    }
+       }
        return z;
     }
+    
+    public int getSpeed() {
+		return speed;
+	}
+	public void setSpeed(int speed) {
+		this.speed = speed;
+	}
+    public int getAttack() {
+		return attack;
+	}
+	public void setAttack(int attack) {
+		this.attack = attack;
+	}
 
 }
