@@ -6,4 +6,8 @@ The creator of the game, George Fan, was inspired by tower defense games and wan
 
 We believe that this project presents an excellent opportunity to explore and expand upon the gameplay elements that have made the franchise so successful. By recreating a Plant vs Zombie game, we hope to meet the requirements of the university course and create a product that is enjoyable and challenging for players.
 
-It was a 4 members project but 2 entirely drop out without inform so this is way to scrappy to even consider a game. But it lit 🔥
+It was a 4 members project but 2 entirely drop out without inform so this is way to scrappy to even consider a game. 
+
+## Gameplay 
+![image](https://github.com/DSTai/Plants-Vs.-Zombies-OOP-Project/assets/98845918/5893e625-c7df-4d4c-acf1-fbd00462c286)
+![image](https://github.com/DSTai/Plants-Vs.-Zombies-OOP-Project/assets/98845918/24bc57d8-cc99-4c33-84fd-9bfe56fa75a1)
