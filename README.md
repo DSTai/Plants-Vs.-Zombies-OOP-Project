@@ -11,3 +11,4 @@ It was a 4 members project but 2 entirely drop out without inform so this is way
 ## Gameplay 
 ![image](https://github.com/DSTai/Plants-Vs.-Zombies-OOP-Project/assets/98845918/5893e625-c7df-4d4c-acf1-fbd00462c286)
 ![image](https://github.com/DSTai/Plants-Vs.-Zombies-OOP-Project/assets/98845918/24bc57d8-cc99-4c33-84fd-9bfe56fa75a1)
+![image](https://github.com/DSTai/Plants-Vs.-Zombies-OOP-Project/assets/98845918/67706ff9-05c0-424d-823d-262460148f41)
